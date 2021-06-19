@@ -9,6 +9,7 @@ public class SnakeBodyActions : MonoBehaviour {
     [Range(0.0f, 1.0f)]
     //public float smoothTime = 0.2f;    // The smooth time when a body part follows head
     public float smoothTime = 0.05f;
+	public SpriteRenderer sr; 
 	//public float smoothTime = 0.3f;
 
     void Start() {
@@ -16,6 +17,7 @@ public class SnakeBodyActions : MonoBehaviour {
         for (int i = 0; i < head.GetComponent<SnakeMovement>().bodyParts.Count; i++) {
             if (gameObject == head.GetComponent<SnakeMovement>().bodyParts[i].gameObject) {
                 myOrder = i;
+				sr.sortingOrder =-i;
                 break;
             }
         }

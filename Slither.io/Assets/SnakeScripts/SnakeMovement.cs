@@ -8,6 +8,9 @@ using UnityEngine.Advertisements;
 
 public class SnakeMovement : MonoBehaviour
 {
+	public float rotacof;
+	Vector2 oldemouse;
+	Vector2 newdemouse;
     //	##### added by Yue Chen #####
 	private int moveWay ;    // It determines how to control the movement of snake, gained from initial interface
 	private int skinID ;     // It determines the skin of the snake, gained from initial interface
@@ -16,8 +19,8 @@ public class SnakeMovement : MonoBehaviour
     public List<Transform> bodyParts = new List<Transform>();   // Records the location information of body parts of the snake
     public List<GameObject> Robots = new List<GameObject>();    // Records the information of Robots
     
-    private float snakeWalkSpeed = 3.5f; // Called in SnakeMove()
-    private float snakeRunSpeed = 7.0f;  // Called in SnakeRun()
+    public float snakeWalkSpeed = 3.5f; // Called in SnakeMove()
+    public float snakeRunSpeed = 7.0f;  // Called in SnakeRun()
     private bool isRunning; // Called in SnakeRun()
     //public float runBodyPartSmoothTime = 0.1f; // // Called in SnakeRun()
    // private float cameraSmoothTime = 0.13f;  // Called in CameraFollowSnake()
@@ -59,6 +62,15 @@ public class SnakeMovement : MonoBehaviour
     // update is called once per frame
     void Update()
     {
+		if(Input.GetMouseButtonDown(0))
+		{
+			//oldemouse;
+		}
+		if(Input.GetMouseButton(0))
+		{
+			
+			//newdemouse;
+		}
         ChooseControlMethod(moveWay);
 		ColorSnake(skinID);
         GenerateFoodAndItem();
@@ -78,7 +90,7 @@ public class SnakeMovement : MonoBehaviour
     }
 
     /* When the head encounters an object, figure out what to do*/
-    void OnCollisionEnter(Collision obj)
+    void OnTriggerEnter(Collider obj)
     {
         if (obj.transform.tag == "Food")
         {
@@ -471,9 +483,10 @@ public class SnakeMovement : MonoBehaviour
         RaycastHit hit; // Store the first obj touched by ray
         Physics.Raycast(ray, out hit, 50.0f); // The third parameter is the max distance
         mousePosition = new Vector3(hit.point.x, hit.point.y, 0);
-        direction = Vector3.Slerp(direction, mousePosition - transform.position, Time.deltaTime * 1);
+        direction = Vector3.Slerp(direction, mousePosition - transform.position, Time.deltaTime * rotacof);
         direction.z = 0;
         pointInWorld = direction.normalized * radius + transform.position;
+		pointInWorld.z=0;
         transform.LookAt(pointInWorld);
     }
     /* Use virtual joystick to control the direction of snake*/
@@ -503,6 +516,7 @@ public class SnakeMovement : MonoBehaviour
             if (i % 2 == 0)
             {
                 bodyParts[i].GetComponent<Renderer>().material = blue;
+				bodyParts[i].GetComponent<SnakeBodyActions>().sr. color=Color.blue;
             }
         }
     }
@@ -513,6 +527,7 @@ public class SnakeMovement : MonoBehaviour
             if (i % 2 == 0)
             {
                 bodyParts[i].GetComponent<Renderer>().material = red;
+				bodyParts[i].GetComponent<SnakeBodyActions>().sr. color=Color.red;
             }
         }
     }
@@ -523,6 +538,7 @@ public class SnakeMovement : MonoBehaviour
             if (i % 2 == 0)
             {
                 bodyParts[i].GetComponent<Renderer>().material = orange;
+				bodyParts[i].GetComponent<SnakeBodyActions>().sr. color=Color.green;
             }
         }
     }

@@ -59,7 +59,7 @@ public class RobotAction : MonoBehaviour {
     }
 
     /* When the head encounters an object, figure out what to do*/
-    void OnCollisionEnter(Collision obj)
+    void OnTriggerEnter(Collider obj)
     {
         if (obj.transform.tag == "Food")
         {
@@ -199,6 +199,7 @@ public class RobotAction : MonoBehaviour {
             if (i % 2 == 0)
             {
                 robotBody[i].GetComponent<Renderer>().material = blue;
+				robotBody[i].GetComponent<RobotBodyAction>().sr. color=Color.blue;
             }
         }
     }
@@ -209,6 +210,7 @@ public class RobotAction : MonoBehaviour {
             if (i % 2 == 0)
             {
                 robotBody[i].GetComponent<Renderer>().material = red;
+				robotBody[i].GetComponent<RobotBodyAction>().sr. color=Color.red;
             }
         }
     }
@@ -219,6 +221,7 @@ public class RobotAction : MonoBehaviour {
             if (i % 2 == 0)
             {
                 robotBody[i].GetComponent<Renderer>().material = orange;
+				robotBody[i].GetComponent<RobotBodyAction>().sr. color=Color.green;
             }
         }
     }

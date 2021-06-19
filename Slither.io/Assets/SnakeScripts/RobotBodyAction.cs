@@ -9,6 +9,7 @@ public class RobotBodyAction : MonoBehaviour {
     [Range(0.0f, 1.0f)]
     public float smoothTime = 0.2f;    // The smooth time when a body part follows head
     public int myHeadId;
+	public SpriteRenderer sr; 
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class RobotBodyAction : MonoBehaviour {
                 if (gameObject == robotHead.GetComponent<RobotAction>().robotBody[j].gameObject)
                 {
                     myOrder = j;
+					sr.sortingOrder =-j;
                     break;
                 }
             }
