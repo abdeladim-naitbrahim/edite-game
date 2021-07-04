@@ -8,7 +8,9 @@ using UnityEngine.Advertisements;
 
 public class SnakeMovement : MonoBehaviour
 {
-	public float rotacof;
+    public Vector3 lastposition;
+    public float time = 0;
+    public float rotacof;
 	Vector2 oldemouse;
 	Vector2 newdemouse;
     //	##### added by Yue Chen #####
@@ -76,10 +78,18 @@ public class SnakeMovement : MonoBehaviour
         GenerateFoodAndItem();
         SnakeRun();
 		SetScore (length);
+		transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
     void FixedUpdate()
     {
+        /*time += Time.deltaTime;
+        if (time > bodyParts[0].GetComponent<SnakeBodyActions>().smoothTime)*/
+        // If the body part is the first one, then it follows the head
+        {
+            lastposition = transform.position;
+            // time = 0;
+        }
         SnakeMove();
         SetBodySizeAndSmoothTime();
         CameraFollowSnake();
@@ -87,10 +97,14 @@ public class SnakeMovement : MonoBehaviour
         SnakeMoveAdjust();
         //	##### added by Yue Chen #####
         countText.text = "G o o d  j o b  !  " + nickName + "\nY o u r  L e n g t h  :  " + length;
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        foreach (Transform kl in bodyParts )
+        {
+            kl.GetComponent<SnakeBodyActions>().muUpdate();
+        }
     }
-
-    /* When the head encounters an object, figure out what to do*/
-    void OnTriggerEnter(Collider obj)
+        /* When the head encounters an object, figure out what to do*/
+        void OnTriggerEnter(Collider obj)
     {
         if (obj.transform.tag == "Food")
         {
@@ -135,14 +149,16 @@ public class SnakeMovement : MonoBehaviour
         //	##### added by Morgan #####
         else if (obj.transform.tag == "Item")
         {
-            if (obj.transform.GetComponent<ParticleSystem>().startColor == new Color32(255, 0, 255, 255))
-            {
+            //if (obj.transform.GetComponent<ParticleSystem>().startColor == new Color32(255, 0, 255, 255))
+            if (obj.name.StartsWith("Energy"))            
+			{
                 Destroy(obj.gameObject);
                 curAmountOfItem--;
                 snakeWalkSpeed += 3.5f;
                 StartCoroutine("speedUpTime");
             }
-            if (obj.transform.GetComponent<ParticleSystem>().startColor == new Color32(0, 255, 0, 255))
+            //if (obj.transform.GetComponent<ParticleSystem>().startColor == new Color32(0, 255, 0, 255))
+			else if (obj.name.StartsWith("Poison"))
             {
                 Destroy(obj.gameObject);
                 curAmountOfItem--;
@@ -152,6 +168,13 @@ public class SnakeMovement : MonoBehaviour
                     StartCoroutine("punishTime");
                 }
             }
+            else if (obj.name.StartsWith("scalecamera"))
+            {
+				Destroy(obj.gameObject);                
+                StartCoroutine("scalecamera");
+            }
+            
+            
         }
         else if (obj.transform.tag == "Boundary")
         {
@@ -206,16 +229,36 @@ public class SnakeMovement : MonoBehaviour
     //	##### added by Morgan #####
     IEnumerator speedUpTime()
     {
-        yield return new WaitForSeconds(2);
+        efect.instance.setefect(0);
+        yield return new WaitForSeconds(efect.defaulttime);
+        
         snakeWalkSpeed -= 3.5f;
     }
     IEnumerator punishTime()
     {
-        yield return new WaitForSeconds(2);
+        efect.instance.setefect(1);        
+        yield return new WaitForSeconds(efect.defaulttime);
         isRunning = false;
-		snakeWalkSpeed = 3.5f;
-     
+		snakeWalkSpeed = 3.5f;     
     }
+    IEnumerator scalecamera()
+    {
+        GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
+        for (int i = 0; i < 20; i++)
+        {            
+            camera.GetComponent<Camera>().orthographicSize += 0.05f*5;
+            yield return new WaitForSeconds(0.1f);
+        }
+        efect.instance.setefect(2);
+        yield return new WaitForSeconds(efect.defaulttime);
+        for (int i = 0; i < 20; i++)
+        {
+            camera.GetComponent<Camera>().orthographicSize -= 0.05f * 5;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+    
+
 
 
     /* When losing body parts, snake size down*/
@@ -295,11 +338,12 @@ public class SnakeMovement : MonoBehaviour
     void GenerateFoodBeforeBegin()
     {
         int i = 0;
-        while (i < 200)
+        while (i < 50)
         {
             int r = Random.Range(0, 2);
             Vector3 foodPos;
-            if (r == 0)
+            //if (r == 0)
+				if (false)
             {
                 foodPos = new Vector3(Random.Range(-30, 30), Random.Range(-30, 30), 0);
             }
@@ -307,16 +351,18 @@ public class SnakeMovement : MonoBehaviour
             {
                 foodPos = new Vector3(Random.Range(-60, 60), Random.Range(-60, 60), 0);
             }
-            GameObject newFood = Instantiate(foodGenerateTarget[Random.Range(0, foodGenerateTarget.Length)], foodPos, Quaternion.identity) as GameObject;
-            newFood.transform.parent = GameObject.Find("Foods").transform;
+			int im=Random.Range(1, 4);
+			for(int j=0;j<im;j++) 
+            {GameObject newFood = Instantiate(foodGenerateTarget[Random.Range(0, foodGenerateTarget.Length)], foodPos+0.6f*new Vector3(Mathf.Cos(6.24f*j/im),Mathf.Sin(6.24f*j/im),0), Quaternion.identity) as GameObject;
+			newFood.transform.parent = GameObject.Find("Foods").transform;
             curAmountOfFood++;
-            i++;
+		i++;}
         }
     }
 
     void GenerateStoneBeforeBegin()
     {
-        int i = 0;
+        /*int i = 0;
         while (i < 400)
         {
             Vector3 stonePos = new Vector3(Random.Range(-120, 120), Random.Range(-120, 120), 0);
@@ -324,13 +370,13 @@ public class SnakeMovement : MonoBehaviour
             newStone.transform.parent = GameObject.Find("Stones").transform;
             curAmountOfFood++;
             i++;
-        }
+        }*/
     }
 
     /* Generate food points every few seconds until there are enough points on the map*/
     public int curAmountOfFood, maxAmountOfFood = 600;  // The max amount of food in the map
     public int curAmountOfItem, maxAmountOfItem = 60;  // The max amount of item in the map
-    private float foodGenerateEveryXSecond = 0.1f;   // Generate a food point every 3 seconds
+    private float foodGenerateEveryXSecond = 2;   // Generate a food point every 3 seconds
     public GameObject[] foodGenerateTarget;     // Store the objects of food points
     public GameObject[] itemGenerateTarget;     // Store the objects of item
     public GameObject stone; // the object of stone
@@ -342,7 +388,8 @@ public class SnakeMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         StopCoroutine("RunGenerateFoodAndItem");
-        if (curAmountOfFood < maxAmountOfFood)
+		int k=Random.Range(0, 20);
+        if (k>2 && curAmountOfFood < maxAmountOfFood)
         {
             int r = Random.Range(0, 4);
             Vector3 foodPos;
@@ -362,11 +409,13 @@ public class SnakeMovement : MonoBehaviour
             {
                 foodPos = new Vector3(Random.Range(-120, 120), Random.Range(-120, 120), 0);
             }
-            GameObject newFood = Instantiate(foodGenerateTarget[Random.Range(0, foodGenerateTarget.Length)], foodPos, Quaternion.identity) as GameObject;
+			int im=Random.Range(1, 4);
+			for(int j=0;j<im;j++) 
+            {GameObject newFood = Instantiate(foodGenerateTarget[Random.Range(0, foodGenerateTarget.Length)], foodPos+0.6f*new Vector3(Mathf.Cos(6.24f*j/im),Mathf.Sin(6.24f*j/im),0), Quaternion.identity) as GameObject;
             newFood.transform.parent = GameObject.Find("Foods").transform;
-            curAmountOfFood++;
+		curAmountOfFood++;}
         }
-        if (curAmountOfItem < maxAmountOfItem)
+        else if (k<=2 && curAmountOfItem < maxAmountOfItem)
         {
             int r = Random.Range(0, 4);
             Vector3 itemPos;
