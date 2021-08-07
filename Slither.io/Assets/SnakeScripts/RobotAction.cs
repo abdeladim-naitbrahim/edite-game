@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class RobotAction : MonoBehaviour {
-
+	public SpriteRenderer character;
     public List<Transform> robotBody = new List<Transform>();   // Records the location information of body parts of the snake
 
     public Transform addRobotBody;   // Called in OnCollisionEnter(), it is the thing added behind the snake after eating fo
@@ -15,13 +15,15 @@ public class RobotAction : MonoBehaviour {
     private float bodyPartSmoothTime = 0.2f; //Called in OnCollisionEnter(), the same value as in SnakeBodyActions.cs
     private float currentRotation; //Called in RobotRandomMove()
     private float rotationSensitivity = 50.0f; //Called in RobotRandomMove()
-
+	public SnakeMovement snakmouv;
     public GameObject[] foodGenerateTarget;     // Store the objects of food points
   
 
     // Use this for initialization
     void Start () {
         InitiateBodies();
+		InitiateBodies();
+		InitiateBodies();
     }
 	
 	// Update is called once per frame
@@ -106,6 +108,7 @@ public class RobotAction : MonoBehaviour {
             }
             GameObject head = GameObject.Find(this.name);
             Destroy(head);
+			snakmouv.GenerateRobotBeforeBegin(false);
         }
         else if ((obj.transform.tag == "Body"))
         {
@@ -185,12 +188,13 @@ public class RobotAction : MonoBehaviour {
     public Material blue, red, orange;
     void ColorRobot(int id)
     {
-        switch (id)
+        switch (id%3)
         {
             case 1: BlueAndWhite(); break;
             case 2: RedAndWhite(); break;
             case 3: OrangeAndWhite(); break;
         }
+		character.sprite= Resources.Load<Sprite>("c"+id.ToString());
     }
     void BlueAndWhite()
     {

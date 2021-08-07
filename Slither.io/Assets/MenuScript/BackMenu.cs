@@ -5,10 +5,10 @@ using UnityEngine.Advertisements;
 
 public class BackMenu: MonoBehaviour {
 	public void back(){
-		if (PlayerPrefs.GetInt("removeAds",0)==0){
+		/*if (PlayerPrefs.GetInt("removeAds",0)==0){
 			ShowAd();
 		}
-		SceneManager.LoadScene ("Menu");
+		SceneManager.LoadScene ("Menu");*/
 	}
 
 
@@ -22,13 +22,13 @@ public class BackMenu: MonoBehaviour {
 //		}
 
 
-		if (!Advertisement.IsReady())
+		/*if (!Advertisement.IsReady())
 		{
 		Debug.Log("Ads not ready for default placement");
 		return;
 		}
 
-		Advertisement.Show();
+		Advertisement.Show();*/
 
 	}
 }

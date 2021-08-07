@@ -8,6 +8,10 @@ using UnityEngine.Advertisements;
 
 public class SnakeMovement : MonoBehaviour
 {
+	public SpriteRenderer character;
+	bool energiget=false;
+	bool camerascaled=false;
+	public SphereCollider sphereCollider;
     public Vector3 lastposition;
     public float time = 0;
     public float rotacof;
@@ -20,9 +24,9 @@ public class SnakeMovement : MonoBehaviour
 
     public List<Transform> bodyParts = new List<Transform>();   // Records the location information of body parts of the snake
     public List<GameObject> Robots = new List<GameObject>();    // Records the information of Robots
-    
-    public float snakeWalkSpeed = 3.5f; // Called in SnakeMove()
-    public float snakeRunSpeed = 7.0f;  // Called in SnakeRun()
+    public float defaultwalk=7;
+    public float snakeWalkSpeed = 7; // Called in SnakeMove()
+    public float snakeRunSpeed = 11;  // Called in SnakeRun()
     private bool isRunning; // Called in SnakeRun()
     //public float runBodyPartSmoothTime = 0.1f; // // Called in SnakeRun()
    // private float cameraSmoothTime = 0.13f;  // Called in CameraFollowSnake()
@@ -154,10 +158,10 @@ public class SnakeMovement : MonoBehaviour
 			{
                 Destroy(obj.gameObject);
                 curAmountOfItem--;
-                snakeWalkSpeed += 3.5f;
+                snakeWalkSpeed = snakeRunSpeed;
                 StartCoroutine("speedUpTime");
             }
-            //if (obj.transform.GetComponent<ParticleSystem>().startColor == new Color32(0, 255, 0, 255))
+            /*if (obj.transform.GetComponent<ParticleSystem>().startColor == new Color32(0, 255, 0, 255))
 			else if (obj.name.StartsWith("Poison"))
             {
                 Destroy(obj.gameObject);
@@ -167,14 +171,19 @@ public class SnakeMovement : MonoBehaviour
                     isRunning = true;
                     StartCoroutine("punishTime");
                 }
+            }*/
+			else if (obj.name.StartsWith("magnitic"))
+            {
+                Destroy(obj.gameObject);
+                sphereCollider.radius=2;
+				sphereCollider.center=new Vector3(0,3,0);
+                StartCoroutine("magnetic");
             }
             else if (obj.name.StartsWith("scalecamera"))
             {
 				Destroy(obj.gameObject);                
                 StartCoroutine("scalecamera");
-            }
-            
-            
+            }                        
         }
         else if (obj.transform.tag == "Boundary")
         {
@@ -227,49 +236,78 @@ public class SnakeMovement : MonoBehaviour
     }
 
     //	##### added by Morgan #####
-    IEnumerator speedUpTime()
+    void speedUpTime()
     {
-        efect.instance.setefect(0);
-        yield return new WaitForSeconds(efect.defaulttime);
-        
-        snakeWalkSpeed -= 3.5f;
+		energiget=true;
+		CancelInvoke("antispeedUpTime");
+        efect.setefect(0);
+        Invoke( "antispeedUpTime",efect.defaulttime);
+
     }
-    IEnumerator punishTime()
+	void antispeedUpTime()
     {
-        efect.instance.setefect(1);        
+		energiget=false;
+        snakeWalkSpeed = defaultwalk;
+    }
+    /*IEnumerator punishTime()
+    {
+        efect.setefect(1);        
         yield return new WaitForSeconds(efect.defaulttime);
         isRunning = false;
 		snakeWalkSpeed = 3.5f;     
+    }*/
+	void magnetic()
+    {
+		CancelInvoke("antimagnetic");
+        efect.setefect(1);        
+        Invoke( "antimagnetic",efect.defaulttime);    
+    }
+	void antimagnetic()
+    {
+		sphereCollider.radius=1;
+sphereCollider.center=new Vector3(0,1,0);		
     }
     IEnumerator scalecamera()
-    {
+    {		
+		CancelInvoke("invokantiscalecamera");
+        GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
+		efect.setefect(2);
+		if(!camerascaled)		
+        for (int i = 0; i < 20; i++)
+        {      
+			camerascaled=true;      
+            camera.GetComponent<Camera>().orthographicSize += (0.05f*5);
+            yield return new WaitForSeconds(0.05f);
+        }		
+		//yield return new WaitForSeconds(efect.defaulttime-1);
+			Invoke( "invokantiscalecamera",efect.defaulttime-1);   	
+    }
+	void invokantiscalecamera()
+	{
+		StartCoroutine("antiscalecamera");
+	}
+    IEnumerator antiscalecamera()
+    {		
+		camerascaled=false;	
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
         for (int i = 0; i < 20; i++)
-        {            
-            camera.GetComponent<Camera>().orthographicSize += 0.05f*5;
-            yield return new WaitForSeconds(0.1f);
-        }
-        efect.instance.setefect(2);
-        yield return new WaitForSeconds(efect.defaulttime);
-        for (int i = 0; i < 20; i++)
         {
-            camera.GetComponent<Camera>().orthographicSize -= 0.05f * 5;
-            yield return new WaitForSeconds(0.1f);
+            camera.GetComponent<Camera>().orthographicSize -= (0.05f * 5);
+			//if(!camerascaled)
+            yield return new WaitForSeconds(0.05f);
         }
+				
     }
-    
-
-
-
     /* When losing body parts, snake size down*/
 
-    void SnakeScaleChange() {
-        if (curSizeLevel > 0 && foodCounter <= sizeUpArray[curSizeLevel - 1]) {
+    void SnakeScaleChange()
+	{
+        if (curSizeLevel > 0 && foodCounter <= sizeUpArray[curSizeLevel - 1])
+		{
             curSizeLevel--;
             curSize -= Vector3.one * growRate;
             bodyPartSmoothTime -= 0.01f;
             transform.localScale = curSize;
-            // Scale down camera
             GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
             camera.GetComponent<Camera>().orthographicSize -= camera.GetComponent<Camera>().orthographicSize * cameraGrowRate;
         }
@@ -308,9 +346,10 @@ public class SnakeMovement : MonoBehaviour
     public GameObject[] robotGenerateTarget;     // Store the objects of robot snakes
 
     // create robots
-    void GenerateRobotBeforeBegin()
+    public void GenerateRobotBeforeBegin(bool debut=true)
     {
         int i = 0;
+		if(debut)
         while (i < 20)
         {
             int r = Random.Range(0, 2);
@@ -328,10 +367,32 @@ public class SnakeMovement : MonoBehaviour
             newRobot.name = "Robot" + i;
             Robots.Add(newRobot);
             newRobot.GetComponent<RobotAction>().SkinId = Random.Range(1, 4);
+			newRobot.GetComponent<RobotAction>().snakmouv=this;
             newRobot.transform.parent = GameObject.Find("Robots").transform;
             curAmountOfRobot++;
             i++;
         }
+		else
+		{
+			int r = Random.Range(0, 2);
+            Vector3 robotPos;
+            if (r == 0)
+            {
+                robotPos = new Vector3(Random.Range(-30, 30), Random.Range(-30, 30), 0);
+            }
+            else
+            {
+                robotPos = new Vector3(Random.Range(-100, 100), Random.Range(-100, 100), 0);
+            }
+            GameObject newRobot = Instantiate(robotGenerateTarget[Random.Range(0, robotGenerateTarget.Length)],
+                robotPos, Quaternion.identity) as GameObject;
+            newRobot.name = "Robot" + Robots.Count;
+            Robots.Add(newRobot);
+            newRobot.GetComponent<RobotAction>().SkinId = Random.Range(1, 4);
+			newRobot.GetComponent<RobotAction>().snakmouv=this;
+            newRobot.transform.parent = GameObject.Find("Robots").transform;
+            curAmountOfRobot++;
+		}
     }
 
     /* Gernate 200 food points before game start*/
@@ -376,7 +437,7 @@ public class SnakeMovement : MonoBehaviour
     /* Generate food points every few seconds until there are enough points on the map*/
     public int curAmountOfFood, maxAmountOfFood = 600;  // The max amount of food in the map
     public int curAmountOfItem, maxAmountOfItem = 60;  // The max amount of item in the map
-    private float foodGenerateEveryXSecond = 2;   // Generate a food point every 3 seconds
+    public float foodGenerateEveryXSecond = 2;   // Generate a food point every 3 seconds
     public GameObject[] foodGenerateTarget;     // Store the objects of food points
     public GameObject[] itemGenerateTarget;     // Store the objects of item
     public GameObject stone; // the object of stone
@@ -461,7 +522,7 @@ public class SnakeMovement : MonoBehaviour
     private float t1;
     private float t2;
     void SnakeRun() {
-        if (bodyParts.Count > 2)
+        if (bodyParts.Count > 5)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -477,13 +538,14 @@ public class SnakeMovement : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 isRunning = false;
-                snakeWalkSpeed = 3.5f;
+				if(!energiget)
+                snakeWalkSpeed = defaultwalk;
 			
             }
         }
         else {
             isRunning = false;         
-			snakeWalkSpeed = 3.5f;
+			snakeWalkSpeed = defaultwalk;
         }
         if (isRunning == true)
         {
@@ -531,12 +593,15 @@ public class SnakeMovement : MonoBehaviour
         Ray ray = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
         RaycastHit hit; // Store the first obj touched by ray
         Physics.Raycast(ray, out hit, 50.0f); // The third parameter is the max distance
-        mousePosition = new Vector3(hit.point.x, hit.point.y, 0);
-        direction = Vector3.Slerp(direction, mousePosition - transform.position, Time.deltaTime * rotacof);
-        direction.z = 0;
-        pointInWorld = direction.normalized * radius + transform.position;
-		pointInWorld.z=0;
-        transform.LookAt(pointInWorld);
+        mousePosition = new Vector3(hit.point.x, hit.point.y, 0)- transform.position;
+		if(mousePosition.magnitude>1)
+        {
+			direction = Vector3.Slerp(direction, mousePosition, Time.deltaTime * rotacof);
+			direction.z = 0;
+			pointInWorld = direction.normalized * radius + transform.position;
+			pointInWorld.z=0;
+			transform.LookAt(pointInWorld);
+		}
     }
     /* Use virtual joystick to control the direction of snake*/
     void StickControl() { }
@@ -551,13 +616,15 @@ public class SnakeMovement : MonoBehaviour
 
     /* Choose the skin of snake*/
     public Material blue, red, orange;
-    void ColorSnake(int id) {
-        switch (id)
+    void ColorSnake(int id) 
+	{
+        switch (id%3)
         {
             case 1: BlueAndWhite(); break;
             case 2: RedAndWhite(); break;
             case 3: OrangeAndWhite();break;
         }
+		character.sprite= Resources.Load<Sprite>("c"+id.ToString());
     }
     void BlueAndWhite()
     {
@@ -602,13 +669,14 @@ public class SnakeMovement : MonoBehaviour
 //		}
 
 
-		if (!Advertisement.IsReady())
+		/*if (!Advertisement.IsReady())
 		{
 		Debug.Log("Ads not ready for default placement");
 		return;
-		}
+		}*/
 
-		Advertisement.Show();
+		//Advertisement.Show();
+		GoogleMobileAdsDemoScript.mobile_script.ShowInterstitial();
 
 	}
 

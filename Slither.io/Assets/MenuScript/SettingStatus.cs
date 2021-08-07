@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 public class SettingStatus : MonoBehaviour {
 
 	public string nickname;
+	public string urlPrivacyPolicie;
 	public int skinID;
 	public int controlMethodId;
 	public InputField input;
+	public void privacy()
+	{
+		  Application.OpenURL(urlPrivacyPolicie);
+	}
 	void Start(){
 
 	}
