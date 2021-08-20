@@ -28,7 +28,19 @@ public class SettingStatus : MonoBehaviour {
 		} else if (ButtonName == "Skin3") {
 			skinID = 3;
 			PlayerPrefs.SetInt ("skinID", skinID);		
-		} else if (ButtonName == "Control1") {
+		} else if (ButtonName == "Skin4") {
+			skinID = 4;
+			PlayerPrefs.SetInt ("skinID", skinID);		
+		}else if (ButtonName == "Skin5") {
+			skinID = 5;
+			PlayerPrefs.SetInt ("skinID", skinID);		
+		}else if (ButtonName == "Skin6") {
+			skinID = 6;
+			PlayerPrefs.SetInt ("skinID", skinID);		
+		}else if (ButtonName == "Skin7") {
+			skinID = 7;
+			PlayerPrefs.SetInt ("skinID", skinID);		
+		}else if (ButtonName == "Control1") {
 			controlMethodId = 1;
 			PlayerPrefs.SetInt ("moveWayID", controlMethodId);
 		} else if (ButtonName == "Control2") {

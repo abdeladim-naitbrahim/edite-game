@@ -1,0 +1,7 @@
+#Sat Aug 21 00:01:26 WEST 2021
+base.0=/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/dex/debug/out/classes.dex
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/dex/debug/out/classes2.dex

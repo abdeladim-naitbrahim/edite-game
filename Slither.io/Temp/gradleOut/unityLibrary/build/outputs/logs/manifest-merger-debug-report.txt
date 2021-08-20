@@ -1,0 +1,221 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-35:12
+	package
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:70-98
+		INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+		INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:164-189
+		INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+		INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:140-163
+		INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+		INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+	android:installLocation
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:99-139
+supports-screens
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:3-163
+	android:largeScreens
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:78-105
+	android:smallScreens
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:21-48
+	android:normalScreens
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:49-77
+	android:xlargeScreens
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:106-134
+	android:anyDensity
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:135-160
+application
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:3-29:17
+	android:label
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:75-107
+	android:debuggable
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:108-133
+	android:icon
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:209-240
+	android:theme
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:16-74
+	android:isGame
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:187-208
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:134-186
+activity#com.unity3d.player.UnityPlayerActivity
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:5-12:16
+	android:screenOrientation
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:102-146
+	android:label
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:69-101
+	android:launchMode
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:147-178
+	android:hardwareAccelerated
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:361-396
+	android:configChanges
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:179-360
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:15-68
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER+category:name:android.intent.category.LEANBACK_LAUNCHER
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:6:7-10:23
+action#android.intent.action.MAIN
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:7:9-61
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:7:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:8:9-69
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:8:19-66
+category#android.intent.category.LEANBACK_LAUNCHER
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:9:9-78
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:9:19-75
+meta-data#unityplayer.UnityActivity
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:11:7-82
+	android:value
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:11:59-79
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:11:18-58
+activity#com.facebook.unity.FBUnityLoginActivity
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:13:5-301
+	android:configChanges
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:13:70-227
+	android:theme
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:13:228-298
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:13:15-69
+activity#com.facebook.unity.FBUnityDialogsActivity
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:14:5-303
+	android:configChanges
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:14:72-229
+	android:theme
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:14:230-300
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:14:15-71
+activity#com.facebook.unity.FBUnityAppLinkActivity
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:15:5-98
+	android:exported
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:15:72-95
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:15:15-71
+activity#com.facebook.unity.FBUnityDeepLinkingActivity
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:5-102
+	android:exported
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:76-99
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:15-75
+activity#com.facebook.unity.FBUnityGameRequestActivity
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:17:5-78
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:17:15-75
+activity#com.facebook.unity.FBUnityCreateGameGroupActivity
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:18:5-82
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:18:15-79
+activity#com.facebook.unity.FBUnityJoinGameGroupActivity
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:19:5-80
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:19:15-77
+activity#com.facebook.unity.AppInviteDialogActivity
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:20:5-75
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:20:15-72
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:21:5-99
+	android:value
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:21:62-96
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:21:16-61
+provider#com.facebook.FacebookContentProvider
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:5-172
+	android:authorities
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:67-145
+	android:exported
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:146-169
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:15-66
+activity#com.facebook.unity.FBUnityGamingServicesFriendFinderActivity
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:5-322
+	android:configChanges
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:91-248
+	android:theme
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:249-319
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:15-90
+meta-data#com.facebook.sdk.AutoLogAppEventsEnabled
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:24:5-95
+	android:value
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:24:72-92
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:24:16-71
+meta-data#com.facebook.sdk.AdvertiserIDCollectionEnabled
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:25:5-101
+	android:value
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:25:78-98
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:25:16-77
+meta-data#unity.splash-mode
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:26:5-69
+	android:value
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:26:49-66
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:26:16-48
+meta-data#unity.splash-enable
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:27:5-74
+	android:value
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:27:51-71
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:27:16-50
+meta-data#unity.build-id
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:28:5-101
+	android:value
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:28:46-98
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:28:16-45
+uses-feature#0x00020000
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:30:3-52
+	android:glEsVersion
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:30:17-49
+uses-permission#android.permission.INTERNET
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:31:3-65
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:31:20-62
+uses-feature#android.hardware.touchscreen
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:32:3-88
+	android:required
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:32:61-85
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:32:17-60
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:33:3-99
+	android:required
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:33:72-96
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:33:17-71
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:34:3-108
+	android:required
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:34:81-105
+	android:name
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:34:17-80
+uses-sdk
+INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+		INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+		ADDED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+		INJECTED from /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml

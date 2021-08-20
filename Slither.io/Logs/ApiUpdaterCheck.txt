@@ -1,0 +1,37 @@
+[api-updater (non-obsolete-error-filter)] 8/16/2021 12:33:20 AM : Starting /media/abdeladim2/a01baef1-c72c-4657-8a6a-4faba3af1ab2/home/abdeladim/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 76.428ms
+moved types parse time: 43ms
+candidates parse time : 0ms
+C# parse time         : 188ms
+candidates check time : 24ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 8/17/2021 3:52:56 PM : Starting /media/abdeladim2/a01baef1-c72c-4657-8a6a-4faba3af1ab2/home/abdeladim/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] Exception caught while loading types from /home/abdeladim2/edite-game/Slither.io/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll (some types may not be loaded)
+	Exception of type 'System.Reflection.ReflectionTypeLoadException' was thrown.
+	  at (wrapper managed-to-native) System.Reflection.Assembly.GetTypes(System.Reflection.Assembly,bool)
+  at System.Reflection.Assembly.GetTypes () [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at APIUpdater.NonObsoleteApiUpdaterDetector.ExtraInfoParser+<LoadTypesWithMovedFromAttributeAsync>d__3.MoveNext () [0x000c8] in <f4220ae6b779455d88a01cbcc3c694c1>:0 
+	Could not load file or assembly 'UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 102.168ms
+moved types parse time: 44ms
+candidates parse time : 0ms
+C# parse time         : 235ms
+candidates check time : 42ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 8/17/2021 4:07:24 PM : Starting /media/abdeladim2/a01baef1-c72c-4657-8a6a-4faba3af1ab2/home/abdeladim/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 43.15ms
+moved types parse time: 42ms
+candidates parse time : 0ms
+C# parse time         : 199ms
+candidates check time : 43ms
+console write time    : 0ms
+

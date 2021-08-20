@@ -7,8 +7,9 @@ public class BackMenu: MonoBehaviour {
 	public void back(){
 		/*if (PlayerPrefs.GetInt("removeAds",0)==0){
 			ShowAd();
-		}
-		SceneManager.LoadScene ("Menu");*/
+		}*/
+		ShowAd();
+		SceneManager.LoadScene ("Menu");
 	}
 
 
@@ -29,6 +30,7 @@ public class BackMenu: MonoBehaviour {
 		}
 
 		Advertisement.Show();*/
+		GoogleMobileAdsDemoScript.mobile_script.ShowInterstitialAd();
 
 	}
 }

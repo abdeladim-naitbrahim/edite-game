@@ -51,10 +51,13 @@ public class ShareFacebook : MonoBehaviour {
 
 	public void Share(){
 
-		FB.ShareLink (
+		/*FB.ShareLink (
 			contentTitle:"Slither from Team CCMP",
 			contentDescription:"Hey,join this game and play with me!",
-			callback: OnShare);	
+			callback: OnShare);	*/
+			string url="https://play.google.com/store/apps/details?id=air.com.hypah.io.slither";
+			 Application.OpenURL("https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dair.com.hypah.io.slither");
+			 //+" target="_blank"
 	}
 
 	private void OnShare(IShareResult result){

@@ -1,0 +1,201 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.unity3d.player"
+4    android:installLocation="preferExternal"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="19"
+9-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+10        android:targetSdkVersion="29" />
+10-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
+11
+12    <supports-screens
+12-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:3-163
+13        android:anyDensity="true"
+13-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:135-160
+14        android:largeScreens="true"
+14-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:78-105
+15        android:normalScreens="true"
+15-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:49-77
+16        android:smallScreens="true"
+16-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:21-48
+17        android:xlargeScreens="true" />
+17-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:3:106-134
+18
+19    <uses-feature android:glEsVersion="0x00020000" />
+19-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:30:3-52
+19-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:30:17-49
+20
+21    <uses-permission android:name="android.permission.INTERNET" />
+21-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:31:3-65
+21-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:31:20-62
+22
+23    <uses-feature
+23-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:32:3-88
+24        android:name="android.hardware.touchscreen"
+24-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:32:17-60
+25        android:required="false" />
+25-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:32:61-85
+26    <uses-feature
+26-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:33:3-99
+27        android:name="android.hardware.touchscreen.multitouch"
+27-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:33:17-71
+28        android:required="false" />
+28-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:33:72-96
+29    <uses-feature
+29-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:34:3-108
+30        android:name="android.hardware.touchscreen.multitouch.distinct"
+30-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:34:17-80
+31        android:required="false" />
+31-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:34:81-105
+32
+33    <application
+33-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:3-29:17
+34        android:name="androidx.multidex.MultiDexApplication"
+34-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:134-186
+35        android:debuggable="true"
+35-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:108-133
+36        android:icon="@mipmap/app_icon"
+36-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:209-240
+37        android:isGame="true"
+37-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:187-208
+38        android:label="@string/app_name"
+38-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:75-107
+39        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+39-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:4:16-74
+40        <activity
+40-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:5-12:16
+41            android:name="com.unity3d.player.UnityPlayerActivity"
+41-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:15-68
+42            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+42-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:179-360
+43            android:hardwareAccelerated="false"
+43-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:361-396
+44            android:label="@string/app_name"
+44-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:69-101
+45            android:launchMode="singleTask"
+45-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:147-178
+46            android:screenOrientation="reverseLandscape" >
+46-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:102-146
+47            <intent-filter>
+47-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:6:7-10:23
+48                <action android:name="android.intent.action.MAIN" />
+48-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:7:9-61
+48-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:7:17-58
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:8:9-69
+50-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:8:19-66
+51                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+51-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:9:9-78
+51-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:9:19-75
+52            </intent-filter>
+53
+54            <meta-data
+54-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:11:7-82
+55                android:name="unityplayer.UnityActivity"
+55-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:11:18-58
+56                android:value="true" />
+56-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:11:59-79
+57        </activity>
+58        <activity
+58-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:13:5-301
+59            android:name="com.facebook.unity.FBUnityLoginActivity"
+59-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:13:15-69
+60            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+60-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:13:70-227
+61            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+61-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:13:228-298
+62        <activity
+62-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:14:5-303
+63            android:name="com.facebook.unity.FBUnityDialogsActivity"
+63-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:14:15-71
+64            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+64-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:14:72-229
+65            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+65-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:14:230-300
+66        <activity
+66-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:15:5-98
+67            android:name="com.facebook.unity.FBUnityAppLinkActivity"
+67-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:15:15-71
+68            android:exported="true" />
+68-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:15:72-95
+69        <activity
+69-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:5-102
+70            android:name="com.facebook.unity.FBUnityDeepLinkingActivity"
+70-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:15-75
+71            android:exported="true" />
+71-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:76-99
+72        <activity android:name="com.facebook.unity.FBUnityGameRequestActivity" />
+72-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:17:5-78
+72-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:17:15-75
+73        <activity android:name="com.facebook.unity.FBUnityCreateGameGroupActivity" />
+73-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:18:5-82
+73-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:18:15-79
+74        <activity android:name="com.facebook.unity.FBUnityJoinGameGroupActivity" />
+74-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:19:5-80
+74-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:19:15-77
+75        <activity android:name="com.facebook.unity.AppInviteDialogActivity" />
+75-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:20:5-75
+75-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:20:15-72
+76
+77        <meta-data
+77-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:21:5-99
+78            android:name="com.facebook.sdk.ApplicationId"
+78-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:21:16-61
+79            android:value="fb1169155816905441" />
+79-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:21:62-96
+80
+81        <provider
+81-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:5-172
+82            android:name="com.facebook.FacebookContentProvider"
+82-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:15-66
+83            android:authorities="com.facebook.app.FacebookContentProvider1169155816905441"
+83-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:67-145
+84            android:exported="true" />
+84-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:146-169
+85
+86        <activity
+86-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:5-322
+87            android:name="com.facebook.unity.FBUnityGamingServicesFriendFinderActivity"
+87-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:15-90
+88            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+88-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:91-248
+89            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+89-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:249-319
+90
+91        <meta-data
+91-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:24:5-95
+92            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+92-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:24:16-71
+93            android:value="true" />
+93-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:24:72-92
+94        <meta-data
+94-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:25:5-101
+95            android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
+95-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:25:16-77
+96            android:value="true" />
+96-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:25:78-98
+97        <meta-data
+97-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:26:5-69
+98            android:name="unity.splash-mode"
+98-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:26:16-48
+99            android:value="0" />
+99-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:26:49-66
+100        <meta-data
+100-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:27:5-74
+101            android:name="unity.splash-enable"
+101-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:27:16-50
+102            android:value="True" />
+102-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:27:51-71
+103        <meta-data
+103-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:28:5-101
+104            android:name="unity.build-id"
+104-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:28:16-45
+105            android:value="c8ef59f7-bad6-4e6e-af93-84cd85666e85" />
+105-->/home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:28:46-98
+106    </application>
+107
+108</manifest>

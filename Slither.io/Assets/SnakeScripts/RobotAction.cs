@@ -185,17 +185,64 @@ public class RobotAction : MonoBehaviour {
 
 
     /* Choose the skin of snake*/
-    public Material blue, red, orange;
-    void ColorRobot(int id)
-    {
-        switch (id%3)
+        public Material blue, red, black,white,prubple,green,yelow;
+    void ColorRobot(int id) 
+	{
+        switch (id)
         {
-            case 1: BlueAndWhite(); break;
-            case 2: RedAndWhite(); break;
-            case 3: OrangeAndWhite(); break;
+            case 1: White(); break;
+            case 2: BlueAndWhite(); break;
+            case 3: RedAndWhite(); break;
+            case 4: Black();break;
+            case 5: Green();break;
+            case 6: Yelow();break;
+            case 7: Prubpl();break;
+
         }
-		character.sprite= Resources.Load<Sprite>("c"+id.ToString());
+		character.sprite= Resources.Load<Sprite>("char"+id.ToString());
     }
+
+     void White()
+    {
+        for (int i = 0; i < robotBody.Count; i++) {
+            if (i % 2 == 0)
+            {
+                robotBody[i].GetComponent<Renderer>().material = white;
+				robotBody[i].GetComponent<RobotBodyAction>().sr. color=Color.white;
+            }
+        }
+    }
+void Yelow()
+    {
+        for (int i = 0; i < robotBody.Count; i++) {
+            if (i % 2 == 0)
+            {
+                robotBody[i].GetComponent<Renderer>().material = yelow;
+				robotBody[i].GetComponent<RobotBodyAction>().sr. color=Color.yellow;
+            }
+        }
+    }
+void Prubpl()
+    {
+        for (int i = 0; i < robotBody.Count; i++) {
+            if (i % 2 == 0)
+            {
+                robotBody[i].GetComponent<Renderer>().material = prubple;
+				robotBody[i].GetComponent<RobotBodyAction>().sr. color=Color.magenta;
+            }
+        }
+    }
+void Green()
+    {
+        for (int i = 0; i < robotBody.Count; i++) {
+            if (i % 2 == 0)
+            {
+                robotBody[i].GetComponent<Renderer>().material = green;
+				robotBody[i].GetComponent<RobotBodyAction>().sr. color=Color.green;
+            }
+        }
+    }
+
     void BlueAndWhite()
     {
         for (int i = 0; i < robotBody.Count; i++)
@@ -218,14 +265,14 @@ public class RobotAction : MonoBehaviour {
             }
         }
     }
-    void OrangeAndWhite()
+    void Black()
     {
         for (int i = 0; i < robotBody.Count; i++)
         {
             if (i % 2 == 0)
             {
-                robotBody[i].GetComponent<Renderer>().material = orange;
-				robotBody[i].GetComponent<RobotBodyAction>().sr. color=Color.green;
+                robotBody[i].GetComponent<Renderer>().material = black;
+				robotBody[i].GetComponent<RobotBodyAction>().sr. color=Color.black;
             }
         }
     }

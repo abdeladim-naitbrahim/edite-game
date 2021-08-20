@@ -8,6 +8,7 @@ using UnityEngine.Advertisements;
 
 public class SnakeMovement : MonoBehaviour
 {
+    public static bool speedflag;
 	public SpriteRenderer character;
 	bool energiget=false;
 	bool camerascaled=false;
@@ -366,7 +367,7 @@ sphereCollider.center=new Vector3(0,1,0);
                 robotPos, Quaternion.identity) as GameObject;
             newRobot.name = "Robot" + i;
             Robots.Add(newRobot);
-            newRobot.GetComponent<RobotAction>().SkinId = Random.Range(1, 4);
+            newRobot.GetComponent<RobotAction>().SkinId = Random.Range(1, 8);
 			newRobot.GetComponent<RobotAction>().snakmouv=this;
             newRobot.transform.parent = GameObject.Find("Robots").transform;
             curAmountOfRobot++;
@@ -404,11 +405,11 @@ sphereCollider.center=new Vector3(0,1,0);
             int r = Random.Range(0, 2);
             Vector3 foodPos;
             //if (r == 0)
-				if (false)
+				/*if (false)
             {
                 foodPos = new Vector3(Random.Range(-30, 30), Random.Range(-30, 30), 0);
             }
-            else
+            else*/
             {
                 foodPos = new Vector3(Random.Range(-60, 60), Random.Range(-60, 60), 0);
             }
@@ -524,20 +525,32 @@ sphereCollider.center=new Vector3(0,1,0);
     void SnakeRun() {
         if (bodyParts.Count > 5)
         {
+            if(speedflag)
+            {
+                isRunning = true;
+                snakeWalkSpeed = snakeRunSpeed;
+            }
+            else
+            {
+                isRunning = false;
+                if(!energiget)
+                snakeWalkSpeed = defaultwalk;
+            }
             if (Input.GetMouseButtonDown(0))
             {
                 t2 = Time.realtimeSinceStartup;
                 if (t2 - t1 < 0.2)
                 {
+                    speedflag=true;
                     isRunning = true;
                     snakeWalkSpeed = snakeRunSpeed;
                 }
                 t1 = t2;
             }
-
             if (Input.GetMouseButtonUp(0))
             {
                 isRunning = false;
+                speedflag=false;
 				if(!energiget)
                 snakeWalkSpeed = defaultwalk;
 			
@@ -590,7 +603,23 @@ sphereCollider.center=new Vector3(0,1,0);
     private float radius = 20.0f;
     void MouseControlSnake()
     {
-        Ray ray = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+ var fingerCount = 0;
+ Vector3 vxy=Input.mousePosition;
+ #if UNITY_ANDROID
+        foreach (Touch touch in Input.touches)
+        {
+            if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
+            {
+                fingerCount++;
+            }
+        }
+        if (fingerCount > 0)
+        {
+            vxy=Input.touches[0].position;
+        }
+     #endif   
+
+        Ray ray = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().ScreenPointToRay(vxy);
         RaycastHit hit; // Store the first obj touched by ray
         Physics.Raycast(ray, out hit, 50.0f); // The third parameter is the max distance
         mousePosition = new Vector3(hit.point.x, hit.point.y, 0)- transform.position;
@@ -615,16 +644,21 @@ sphereCollider.center=new Vector3(0,1,0);
     }
 
     /* Choose the skin of snake*/
-    public Material blue, red, orange;
+    public Material blue, red, black,white,prubple,green,yelow;
     void ColorSnake(int id) 
 	{
-        switch (id%3)
+        switch (id)
         {
-            case 1: BlueAndWhite(); break;
-            case 2: RedAndWhite(); break;
-            case 3: OrangeAndWhite();break;
+            case 1: White(); break;
+            case 2: BlueAndWhite(); break;
+            case 3: RedAndWhite(); break;
+            case 4: Black();break;
+            case 5: Green();break;
+            case 6: Yelow();break;
+            case 7: Prubpl();break;
+
         }
-		character.sprite= Resources.Load<Sprite>("c"+id.ToString());
+		character.sprite= Resources.Load<Sprite>("char"+id.ToString());
     }
     void BlueAndWhite()
     {
@@ -636,7 +670,47 @@ sphereCollider.center=new Vector3(0,1,0);
             }
         }
     }
-    void RedAndWhite()
+     void White()
+    {
+        for (int i = 0; i < bodyParts.Count; i++) {
+            if (i % 2 == 0)
+            {
+                bodyParts[i].GetComponent<Renderer>().material = white;
+				bodyParts[i].GetComponent<SnakeBodyActions>().sr. color=Color.white;
+            }
+        }
+    }
+void Yelow()
+    {
+        for (int i = 0; i < bodyParts.Count; i++) {
+            if (i % 2 == 0)
+            {
+                bodyParts[i].GetComponent<Renderer>().material = yelow;
+				bodyParts[i].GetComponent<SnakeBodyActions>().sr. color=Color.yellow;
+            }
+        }
+    }
+void Prubpl()
+    {
+        for (int i = 0; i < bodyParts.Count; i++) {
+            if (i % 2 == 0)
+            {
+                bodyParts[i].GetComponent<Renderer>().material = prubple;
+				bodyParts[i].GetComponent<SnakeBodyActions>().sr. color=Color.magenta;
+            }
+        }
+    }
+void Green()
+    {
+        for (int i = 0; i < bodyParts.Count; i++) {
+            if (i % 2 == 0)
+            {
+                bodyParts[i].GetComponent<Renderer>().material = green;
+				bodyParts[i].GetComponent<SnakeBodyActions>().sr. color=Color.green;
+            }
+        }
+    }
+void RedAndWhite()
     {
         for (int i = 0; i < bodyParts.Count; i++)
         {
@@ -647,14 +721,14 @@ sphereCollider.center=new Vector3(0,1,0);
             }
         }
     }
-    void OrangeAndWhite()
+    void Black()
     {
         for (int i = 0; i < bodyParts.Count; i++)
         {
             if (i % 2 == 0)
             {
-                bodyParts[i].GetComponent<Renderer>().material = orange;
-				bodyParts[i].GetComponent<SnakeBodyActions>().sr. color=Color.green;
+                bodyParts[i].GetComponent<Renderer>().material = black;
+				bodyParts[i].GetComponent<SnakeBodyActions>().sr. color=Color.black;
             }
         }
     }
@@ -676,7 +750,7 @@ sphereCollider.center=new Vector3(0,1,0);
 		}*/
 
 		//Advertisement.Show();
-		GoogleMobileAdsDemoScript.mobile_script.ShowInterstitial();
+		GoogleMobileAdsDemoScript.mobile_script.ShowInterstitialAd();
 
 	}
 

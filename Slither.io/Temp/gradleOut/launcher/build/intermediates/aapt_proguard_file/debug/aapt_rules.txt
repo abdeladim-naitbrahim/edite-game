@@ -1,0 +1,144 @@
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:61
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:61
+-keep class androidx.multidex.MultiDexApplication { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:305
+-keep class androidx.room.MultiInstanceInvalidationService { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:221
+-keep class androidx.work.impl.WorkManagerInitializer { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:245
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:255
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:275
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:265
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:295
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:284
+-keep class androidx.work.impl.background.systemalarm.RescheduleReceiver { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:228
+-keep class androidx.work.impl.background.systemalarm.SystemAlarmService { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:233
+-keep class androidx.work.impl.background.systemjob.SystemJobService { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:240
+-keep class androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:184
+-keep class com.android.billingclient.api.ProxyBillingActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:172
+-keep class com.facebook.CurrentAccessTokenExpirationBroadcastReceiver { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:144
+-keep class com.facebook.CustomTabActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:143
+-keep class com.facebook.CustomTabMainActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:139
+-keep class com.facebook.FacebookActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:113
+-keep class com.facebook.FacebookContentProvider { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:167
+-keep class com.facebook.internal.FacebookInitProvider { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:107
+-keep class com.facebook.unity.AppInviteDialogActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:98
+-keep class com.facebook.unity.FBUnityAppLinkActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:105
+-keep class com.facebook.unity.FBUnityCreateGameGroupActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:101
+-keep class com.facebook.unity.FBUnityDeepLinkingActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:94
+-keep class com.facebook.unity.FBUnityDialogsActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:104
+-keep class com.facebook.unity.FBUnityGameRequestActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:118
+-keep class com.facebook.unity.FBUnityGamingServicesFriendFinderActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:106
+-keep class com.facebook.unity.FBUnityJoinGameGroupActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:90
+-keep class com.facebook.unity.FBUnityLoginActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:200
+-keep class com.google.android.gms.ads.AdActivity { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:212
+-keep class com.google.android.gms.ads.AdService { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:206
+-keep class com.google.android.gms.ads.MobileAdsInitProvider { <init>(); }
+# Referenced at /home/abdeladim2/edite-game/Slither.io/Temp/gradleOut/launcher/build/intermediates/merged_manifests/debug/AndroidManifest.xml:72
+-keep class com.unity3d.player.UnityPlayerActivity { <init>(); }
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_alert_dialog_button_bar_material.xml:43
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_alert_dialog_material.xml:52
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_alert_dialog_title_material.xml:57
+-keep class android.widget.Space { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_select_dialog_material.xml:23
+-keep class androidx.appcompat.app.AlertController$RecycleListView { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_action_menu_item_layout.xml:17
+-keep class androidx.appcompat.view.menu.ActionMenuItemView { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_expanded_menu_layout.xml:17
+-keep class androidx.appcompat.view.menu.ExpandedMenuView { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_cascading_menu_item_layout.xml:20
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_list_menu_item_layout.xml:17
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_popup_menu_item_layout.xml:17
+-keep class androidx.appcompat.view.menu.ListMenuItemView { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_screen_toolbar.xml:27
+-keep class androidx.appcompat.widget.ActionBarContainer { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_action_mode_bar.xml:19
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_screen_toolbar.xml:43
+-keep class androidx.appcompat.widget.ActionBarContextView { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_screen_toolbar.xml:17
+-keep class androidx.appcompat.widget.ActionBarOverlayLayout { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_action_menu_layout.xml:17
+-keep class androidx.appcompat.widget.ActionMenuView { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_activity_chooser_view.xml:19
+-keep class androidx.appcompat.widget.ActivityChooserView$InnerLayout { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_alert_dialog_material.xml:18
+-keep class androidx.appcompat.widget.AlertDialogLayout { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/ae35e9197e7d4cce5e82002ad36947e0/jetified-facebook-common-11.2.0/res/layout/com_facebook_device_auth_dialog_fragment.xml:45
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/ae35e9197e7d4cce5e82002ad36947e0/jetified-facebook-common-11.2.0/res/layout/com_facebook_smart_device_dialog_fragment.xml:47
+-keep class androidx.appcompat.widget.AppCompatImageView { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_alert_dialog_button_bar_material.xml:26
+-keep class androidx.appcompat.widget.ButtonBarLayout { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_screen_content_include.xml:19
+-keep class androidx.appcompat.widget.ContentFrameLayout { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_alert_dialog_title_material.xml:45
+-keep class androidx.appcompat.widget.DialogTitle { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_screen_simple_overlay_action_mode.xml:23
+-keep class androidx.appcompat.widget.FitWindowsFrameLayout { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_dialog_title_material.xml:22
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_screen_simple.xml:17
+-keep class androidx.appcompat.widget.FitWindowsLinearLayout { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_search_view.xml:75
+-keep class androidx.appcompat.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_screen_toolbar.xml:36
+-keep class androidx.appcompat.widget.Toolbar { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_screen_simple.xml:25
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_screen_simple_overlay_action_mode.xml:32
+-keep class androidx.appcompat.widget.ViewStubCompat { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/8ced82e256bcaf8882f64cabe66fcdcd/androidx.browser.browser-1.0.0/res/layout/browser_actions_context_menu_page.xml:5
+-keep class androidx.browser.browseractions.BrowserActionsFallbackMenuView { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/ae35e9197e7d4cce5e82002ad36947e0/jetified-facebook-common-11.2.0/res/layout/com_facebook_device_auth_dialog_fragment.xml:22
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/ae35e9197e7d4cce5e82002ad36947e0/jetified-facebook-common-11.2.0/res/layout/com_facebook_smart_device_dialog_fragment.xml:22
+-keep class androidx.cardview.widget.CardView { <init>(...); }
+
+# Referenced at /home/abdeladim2/.gradle/caches/transforms-2/files-2.1/cb99e77638f7aea73fdfbb0798f74a2b/appcompat-1.1.0/res/layout/abc_alert_dialog_material.xml:41
+-keep class androidx.core.widget.NestedScrollView { <init>(...); }
+
